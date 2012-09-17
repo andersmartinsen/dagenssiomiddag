@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
 
-    <display-name>Spring Mobile test</display-name>
+    <display-name>Dagens middag</display-name>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -14,13 +14,13 @@
     </context-param>
 
     <servlet>
-        <servlet-name>springmobile</servlet-name>
+        <servlet-name>dagensmiddag</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>springmobile</servlet-name>
+        <servlet-name>dagensmiddag</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 

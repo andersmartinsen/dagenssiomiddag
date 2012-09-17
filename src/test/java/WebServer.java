@@ -11,6 +11,6 @@ public class WebServer {
     }
 
     private static WebAppContext webAppContext() {
-        return new WebAppContext("src/main/webapp", "/springmobile");
+        return new WebAppContext("src/main/webapp", "/dagensmiddag");
     }
 }
