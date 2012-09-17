@@ -1,6 +1,7 @@
 package no.bekk.mobil.controller.klient;
 
 import no.bekk.mobil.controller.klient.service.StudentkafeService;
+import org.apache.log4j.Logger;
 import org.mortbay.log.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
@@ -11,9 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+
 @Controller
 public class KlientController {
-    private Log LOG = new Log();
+    private Logger LOG = Logger.getLogger(KlientController.class);
     @Autowired
     private StudentkafeService studentkafeService;
 
