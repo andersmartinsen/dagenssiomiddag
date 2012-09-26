@@ -6,6 +6,7 @@ import java.util.Map;
 public class Studentkafe {
     private Integer id;
     private String navn;
+    private String kortnavn;
     private Adresse adresse;
     private Telefon telefon;
     private String ukenummer;
@@ -13,7 +14,7 @@ public class Studentkafe {
     private String tidspunkt;
     private String kommentar;
     private Map<String, List<Middag>> middager;
-
+    private Pris prisInformasjon;
 
     public Studentkafe() {
     }
@@ -23,12 +24,32 @@ public class Studentkafe {
         setId(id);
     }
 
+    public void setPrisInformasjon(Pris prisInformasjon) {
+        this.prisInformasjon = prisInformasjon;
+    }
+
+    public Pris getPrisInformasjon() {
+        return prisInformasjon;
+    }
+
+    public void setUkenummer(String ukenummer) {
+        this.ukenummer = ukenummer;
+    }
+
     public String getNavn() {
         return navn;
     }
 
     public void setNavn(String navn) {
         this.navn = navn;
+    }
+
+    public void setKortnavn(String kortnavn) {
+        this.kortnavn = kortnavn;
+    }
+
+    public String getKortnavn() {
+        return kortnavn;
     }
 
     public Integer getId() {

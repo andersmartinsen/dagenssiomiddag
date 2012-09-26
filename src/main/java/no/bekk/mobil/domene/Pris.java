@@ -2,22 +2,13 @@ package no.bekk.mobil.domene;
 
 public class Pris {
     private Integer id;
-    private Integer pris;
-    private String storrelse;
+    private String informasjon;
 
-    public Integer getPris() {
-        return pris;
+    public void setInformasjon(String informasjon) {
+        this.informasjon = informasjon;
     }
 
-    public void setPris(Integer pris) {
-        this.pris = pris;
-    }
-
-    public void setStorrelse(String storrelse) {
-        this.storrelse = storrelse;
-    }
-
-    public String getStorrelse() {
-        return storrelse;
+    public String getInformasjon() {
+        return informasjon;
     }
 }
