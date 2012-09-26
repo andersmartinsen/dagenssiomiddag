@@ -5,5 +5,7 @@
 </head>
 <body>
 <h1>${message}</h1>
+
+<a href="${currentUrl}?site_preference=normal">Normal</a> | <a href="${currentUrl}?site_preference=mobile">Mobile</a>
 </body>
 </html>

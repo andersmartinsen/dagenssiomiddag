@@ -2,9 +2,7 @@ package no.bekk.mobil.controller.klient;
 
 import no.bekk.mobil.controller.klient.service.StudentkafeService;
 import org.apache.log4j.Logger;
-import org.mortbay.log.Log;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.Device;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,38 +18,38 @@ public class KlientController {
     private StudentkafeService studentkafeService;
 
     @RequestMapping(value = "studentkafe/{kafeId}", method = RequestMethod.GET)
-    public ModelAndView hentStudentkafe(@PathVariable int kafeId) {
-        LOG.info("Kafeid" + kafeId);
-        return new ModelAndView("visStudentkafe", "studentkafe", studentkafeService.hentStudentkafe(kafeId));
+    public ModelAndView hentStudentkafe(@PathVariable int kafeId, SitePreference sitePreference) {
+        if (sitePreference == SitePreference.MOBILE) {
+            return new ModelAndView("mobil/mobilVisStudentkafe", "studentkafe", studentkafeService.hentStudentkafe(kafeId));
+        } else {
+            return new ModelAndView("desktop/desktopVisStudentkafe", "studentkafe", studentkafeService.hentStudentkafe(kafeId));
+        }
     }
 
     @RequestMapping(value = "studentkafe/", method = RequestMethod.GET)
-    public ModelAndView visAlleStudentkafeer() {
-        return new ModelAndView("visAlleStudentkafeene", "studentkafene", studentkafeService.hentAlleStudentkafeene());
+    public ModelAndView visAlleStudentkafeer(SitePreference sitePreference) {
+        if (sitePreference == SitePreference.MOBILE) {
+            return new ModelAndView("mobil/mobilVisAlleStudentkafeene", "studentkafene", studentkafeService.hentAlleStudentkafeene());
+        } else {
+            return new ModelAndView("desktop/desktopVisAlleStudentkafeene", "studentkafene", studentkafeService.hentAlleStudentkafeene());
+        }
     }
 
     @RequestMapping(value = "/device", method = RequestMethod.GET)
-    public ModelAndView home(SitePreference sitePreference, Device device) {
+    public ModelAndView home(SitePreference sitePreference) {
         ModelAndView mav = new ModelAndView();
         if (sitePreference == SitePreference.MOBILE) {
-            // prepare mobile view for rendering
-            Log.info("sitepref mobile");
-        } else {
-            // prepare normal view for rendering
-            Log.info("normal");
-        }
-        if (device.isMobile()) {
-            mav.setViewName("mobile");
+            mav.setViewName("mobil/mobile");
             String msg = "Hello mobile user!";
-            Log.info(msg);
+            LOG.info(msg);
             mav.addObject("message", msg);
+            return mav;
         } else {
             String msg = "Hello desktop user!";
-            Log.info(msg);
+            LOG.info(msg);
             mav.setViewName("desktop");
             mav.addObject("message", msg);
+            return mav;
         }
-
-        return mav;
     }
 }
