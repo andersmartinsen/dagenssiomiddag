@@ -24,16 +24,13 @@
                 <li><a href="">${ukedager.key}</a></li>
             </c:forEach>
         </ul>--%>
-
-        <div id='slider' class='swipe'>
-            <ul>
+            <ul id='slider' >
                 <li style='display:block'><div>1</div></li>
                 <li style='display:none'><div>2</div></li>
                 <li style='display:none'><div>3</div></li>
                 <li style='display:none'><div>4</div></li>
                 <li style='display:none'><div>5</div></li>
             </ul>
-        </div>
     </div>
 
 
