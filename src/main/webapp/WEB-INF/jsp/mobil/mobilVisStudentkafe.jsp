@@ -18,23 +18,25 @@
         <h1>${studentkafe.kortnavn}</h1>
     </div>
 
-    <%--<div id="slider" data-role="content">
-        <ul  data-role="listview" data-theme="e">
+    <div data-role="content">
+      <%--  <ul  data-role="listview" data-theme="e">
             <c:forEach var="ukedager" items="${studentkafe.middager}">
                 <li><a href="">${ukedager.key}</a></li>
             </c:forEach>
-        </ul>
-    </div>--%>
+        </ul>--%>
 
-    <div id='slider' class='swipe'>
-        <ul>
-            <li style='display:block'><div>1</div></li>
-            <li style='display:none'><div>2</div></li>
-            <li style='display:none'><div>3</div></li>
-            <li style='display:none'><div>4</div></li>
-            <li style='display:none'><div>5</div></li>
-        </ul>
+        <div id='slider' class='swipe'>
+            <ul>
+                <li style='display:block'><div>1</div></li>
+                <li style='display:none'><div>2</div></li>
+                <li style='display:none'><div>3</div></li>
+                <li style='display:none'><div>4</div></li>
+                <li style='display:none'><div>5</div></li>
+            </ul>
+        </div>
     </div>
+
+
 
 
     <div data-role="footer" data-position="fixed">
