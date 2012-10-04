@@ -17,6 +17,8 @@
 
     <mvc:view-controller path="/" view-name="welcome"/>
 
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+
     <mvc:interceptors>
         <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor"/>
         <bean class="org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor"/>
