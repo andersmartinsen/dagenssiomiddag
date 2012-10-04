@@ -54,6 +54,7 @@
 
 <div id="middager">
     Mandag:
+    <br/>
     <c:forEach items="${studentkafe.mandag}" var="middag">
         ${middag.type} : ${middag.innhold}
         <c:if test="${middag.glutenfri}">
@@ -66,6 +67,7 @@
     </c:forEach>
     <br/>
     Tirsdag:
+    <br/>
     <c:forEach items="${studentkafe.tirsdag}" var="middag">
         ${middag.type} : ${middag.innhold}
         <c:if test="${middag.glutenfri}">
@@ -78,6 +80,7 @@
     </c:forEach>
     <br/>
     Onsdag:
+    <br/>
     <c:forEach items="${studentkafe.onsdag}" var="middag">
         ${middag.type} : ${middag.innhold}
         <c:if test="${middag.glutenfri}">
@@ -90,6 +93,7 @@
     </c:forEach>
     <br/>
     Torsdag:
+    <br/>
     <c:forEach items="${studentkafe.torsdag}" var="middag">
         ${middag.type} : ${middag.innhold}
         <c:if test="${middag.glutenfri}">
@@ -102,6 +106,7 @@
     </c:forEach>
     <br/>
     Fredag:
+    <br/>
     <c:forEach items="${studentkafe.fredag}" var="middag">
         ${middag.type} : ${middag.innhold}
         <c:if test="${middag.glutenfri}">
@@ -112,8 +117,6 @@
         </c:if>
         <br>
     </c:forEach>
-    </li>
-    </ul>
 </div>
 
 <div id="">
