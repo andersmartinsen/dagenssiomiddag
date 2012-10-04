@@ -1,47 +1,86 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
 <head>
-    <title>${studentkafe.navn}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-    <title>${studentkafe.navn}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+    <link href='style.css' rel='stylesheet'/>
 </head>
 <body>
-<div>
-    <%--<div data-role="header">
-        <h1>${studentkafe.kortnavn}</h1>
-    </div>
---%>
-      <div  id='slider' class="swipe">
-            <ul>
-                <li style='display:block'><div>1</div></li>
-                <li style='display:none'><div>2</div></li>
-                <li style='display:none'><div>3</div></li>
-                <li style='display:none'><div>4</div></li>
-                <li style='display:none'><div>5</div></li>
-            </ul>
-        </div>
 
-    <%--<div data-role="footer" data-position="fixed">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="${currentUrl}?site_preference=normal">Normal</a></li>
-                <li><a href="${currentUrl}?site_preference=mobile">Mobile</a></li>
-            </ul>
-        </div>
-    </div>--%>
+<h1>Swipe</h1>
+
+<h2>150px wide</h2>
+
+<div id='slider' class='swipe' style='width:150px'>
+    <ul>
+        <li style='display:block'><div>1</div></li>
+        <li style='display:none'><div>2</div></li>
+        <li style='display:none'><div>3</div></li>
+        <li style='display:none'><div>4</div></li>
+        <li style='display:none'><div>5</div></li>
+    </ul>
 </div>
 
-<script src="<spring:url value="/resources/js/swipe.js"/>"></script>
+
+<h2>250px wide</h2>
+
+<div id='slider2' class='swipe' style='width:250px'>
+    <ul>
+        <li style='display:block'><div>1</div></li>
+        <li style='display:none'><div>2</div></li>
+        <li style='display:none'><div>3</div></li>
+        <li style='display:none'><div>4</div></li>
+        <li style='display:none'><div>5</div></li>
+    </ul>
+</div>
+
+
+<h2>Full width</h2>
+
+<div id='slider3' class='swipe'>
+    <ul>
+        <li style='display:block'><div>1</div></li>
+        <li style='display:none'><div>2</div></li>
+        <li style='display:none'><div>3</div></li>
+        <li style='display:none'><div>4</div></li>
+        <li style='display:none'><div>5</div></li>
+    </ul>
+</div>
+
+<a href='#' onclick='slider3.prev();return false;'>prev</a>
+<a href='#' onclick='slider3.next();return false;'>next</a>
+<br><br>
+
+<h2>Arbitrary Elements</h2>
+
+<div id='slider4' class='swipe'>
+    <div>
+        <div style='display:block'><div>1</div></div>
+        <div style='display:none'><div>2</div></div>
+        <div style='display:none'><div>3</div></div>
+        <div style='display:none'><div>4</div></div>
+        <div style='display:none'><div>5</div></div>
+    </div>
+</div>
+
+<a href='#' onclick='slider4.prev();return false;'>prev</a>
+<a href='#' onclick='slider4.next();return false;'>next</a>
+<br><br>
+
+
+<script src='swipe.js'></script>
 <script>
-new Swipe(document.getElementById('slider'));
+    new Swipe(document.getElementById('slider'));
+    new Swipe(document.getElementById('slider2'));
+    var slider3 = new Swipe(document.getElementById('slider3'));
+    var slider4 = new Swipe(document.getElementById('slider4'));
 </script>
+
+<script src="<spring:url value="/resources/js/swipe.js"/>" ></script>
+<script>
+    new Swipe(document.getElementById('slider'));
+</script>
+
 
 </body>
 </html>
