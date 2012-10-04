@@ -14,11 +14,11 @@ public class Middag {
         this.innhold = innhold;
     }
 
-    public Boolean isGlutenfri() {
+    public Boolean getGlutenfri() {
         return glutenfri;
     }
 
-    public Boolean isLaktosefri() {
+    public Boolean getLaktosefri() {
         return laktosefri;
     }
 

@@ -1,7 +1,6 @@
 package no.bekk.mobil.domene;
 
 import java.util.List;
-import java.util.Map;
 
 public class Studentkafe {
     private Integer id;
@@ -13,7 +12,11 @@ public class Studentkafe {
     private String dato;
     private String tidspunkt;
     private String kommentar;
-    private Map<String, List<Middag>> middager;
+    private List<Middag> mandag;
+    private List<Middag> tirsdag;
+    private List<Middag> onsdag;
+    private List<Middag> torsdag;
+    private List<Middag> fredag;
     private Pris prisInformasjon;
 
     public Studentkafe() {
@@ -92,11 +95,43 @@ public class Studentkafe {
         return tidspunkt;
     }
 
-    public Map<String, List<Middag>> getMiddager() {
-        return middager;
+    public List<Middag> getMandag() {
+        return mandag;
     }
 
-    public void setMiddager(Map<String, List<Middag>> middager) {
-        this.middager = middager;
+    public void setMandag(List<Middag> mandag) {
+        this.mandag = mandag;
+    }
+
+    public List<Middag> getTirsdag() {
+        return tirsdag;
+    }
+
+    public void setTirsdag(List<Middag> tirsdag) {
+        this.tirsdag = tirsdag;
+    }
+
+    public List<Middag> getOnsdag() {
+        return onsdag;
+    }
+
+    public void setOnsdag(List<Middag> onsdag) {
+        this.onsdag = onsdag;
+    }
+
+    public List<Middag> getTorsdag() {
+        return torsdag;
+    }
+
+    public void setTorsdag(List<Middag> torsdag) {
+        this.torsdag = torsdag;
+    }
+
+    public List<Middag> getFredag() {
+        return fredag;
+    }
+
+    public void setFredag(List<Middag> fredag) {
+        this.fredag = fredag;
     }
 }

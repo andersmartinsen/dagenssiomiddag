@@ -18,34 +18,50 @@ public class StudentkafeService {
         studentkafe.setAdresse(adresse);
         studentkafe.setTelefon(telefon);
 
-        Pris pris = new Pris();
-        pris.setInformasjon("Dagens middag\n" +
-                "Vanlig porsjon\n" +
-                " \n" +
-                "kr 50,-\n" +
-                "Stor porsjon\n" +
-                " \n" +
-                "kr 62,-\n" +
-                "Risgrøt\n" +
-                " \n" +
-                "kr 33,-");
-        studentkafe.setPrisInformasjon(pris);
+        List<Middag> mandagensMiddager = new ArrayList<Middag>();
+        Middag mandagDagens = new Middag(false, false, "Dagens", "Hjemmelaget lasagne med tomatsalat og brød");
+        Middag mandagDagens2 = new Middag(false, false, "Dagens", "Biff Lindstrøm med peppersaus, gulrøtter og kokte poteter");
+        Middag mandagVegatar = new Middag(true, true, "Vegatar", "Grønnsakswok");
+        mandagensMiddager.add(mandagDagens);
+        mandagensMiddager.add(mandagDagens2);
+        mandagensMiddager.add(mandagVegatar);
+        studentkafe.setMandag(mandagensMiddager);
 
-        Map<String, List<Middag>> ukeMedMiddager = new LinkedHashMap<String, List<Middag>>();
-        List<Middag> middager = new ArrayList<Middag>();
-        Middag mandagDagens = new Middag(false, true, "dagens", "pasta");
-        Middag mandagDagens2 = new Middag(false, true, "dagens", "lapskaus");
-        Middag mandagVegatar = new Middag(false, true, "vegatar", "Gulrotrøsti med bearnaisesaus, salat og stekte poteter");
 
-        middager.add(mandagDagens);
-        middager.add(mandagDagens2);
-        middager.add(mandagVegatar);
-        ukeMedMiddager.put("Mandag", middager);
-        ukeMedMiddager.put("Tirsdag", null);
-        ukeMedMiddager.put("Onsdag", null);
-        ukeMedMiddager.put("Torsdag", null);
-        ukeMedMiddager.put("Fredag", null);
-        studentkafe.setMiddager(ukeMedMiddager);
+        List<Middag> tirsdagensMiddager = new ArrayList<Middag>();
+        Middag tirsdag = new Middag(false, false, "Dagens", "Fiskegrateng med smeltet smør, gulrøtter og kokte poteter");
+        Middag tirsdag2 = new Middag(true, true, "Dagens", "Kyllinglår med tomatsaus, salat og stekte poteter");
+        Middag tirsdag3 = new Middag(false, false, "Vegetar", "Vårruller med chilisaus, salat og ris");
+        tirsdagensMiddager.add(tirsdag);
+        tirsdagensMiddager.add(tirsdag2);
+        tirsdagensMiddager.add(tirsdag3);
+        studentkafe.setTirsdag(tirsdagensMiddager);
+
+        List<Middag> onsdagensMiddager = new ArrayList<Middag>();
+        Middag onsdag = new Middag(false,false, "Dagens", "Tacotallerken");
+        Middag onsdag2 = new Middag(true,true, "Dagens", "Svinekotelett med sennepssky, rødkål og kokte poteter");
+        Middag onsdag3 = new Middag(false,false, "Vegetar", "Falafel med hvitløksdressing, salat og stekte småpoteter");
+        onsdagensMiddager.add(onsdag);
+        onsdagensMiddager.add(onsdag2);
+        onsdagensMiddager.add(onsdag3);
+        studentkafe.setOnsdag(onsdagensMiddager);
+
+        List<Middag> torsdagensMiddager = new ArrayList<Middag>();
+        Middag torsdag = new Middag(false,true,"Dagens", "Pasta bolognese");
+        Middag torsdag2 = new Middag(true,false, "Dagens", "Ovnsbakt laks med agurksalat, gulrøtter og gratinerte dillpoteter");
+        Middag torsdag3 = new Middag(true,true, "Vegetar", "Grønnsaksblanding med ris");
+        torsdagensMiddager.add(torsdag);
+        torsdagensMiddager.add(torsdag2);
+        torsdagensMiddager.add(torsdag3);
+        studentkafe.setTorsdag(torsdagensMiddager);
+
+        List<Middag> fredagensMiddager = new ArrayList<Middag>();
+        Middag fredag = new Middag(false,true, "Dagens", "Hamburgertallerken");
+        Middag fredag2 = new Middag(true,false, "Vegetar", "Risgrøt med saft");
+        fredagensMiddager.add(fredag);
+        fredagensMiddager.add(fredag2);
+        studentkafe.setFredag(fredagensMiddager);
+
         return studentkafe;
     }
 
