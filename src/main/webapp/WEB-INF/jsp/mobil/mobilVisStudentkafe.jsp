@@ -97,6 +97,7 @@
     </div>
 
     <div data-role="footer" data-position="fixed">
+        ${currentUrl}
         <div data-role="navbar">
             <ul>
                 <li><a href="${currentUrl}?site_preference=normal">Normal</a></li>

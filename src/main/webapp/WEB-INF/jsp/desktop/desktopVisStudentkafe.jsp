@@ -1,5 +1,5 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -38,34 +38,89 @@
 
 </head>
 <body>
-    <h1>${studentkafe.navn}</h1>
+<h1>${studentkafe.navn}</h1>
 
-    <div id="informasjon">
-        <h3>${studentkafe.adresse.linje1}</h3>
-        <h3>${studentkafe.adresse.linje2}</h3>
-        <h3>${studentkafe.telefon.nummer}</h3>
-    </div>
+<div id="informasjon">
+    <h3>${studentkafe.adresse.linje1}</h3>
 
-    <div id="uke">
-        <p>${studentkafe.ukenummer}</p>
-    </div>
+    <h3>${studentkafe.adresse.linje2}</h3>
 
-    <div id="middager">
-        <ul>
-            <c:forEach var="ukedager" items="${studentkafe.middager}">
-              <p>${ukedager.key}</p>
-                <c:forEach var="middager" items="${ukedager.value}">
-                      <li>${middager.type} : ${middager.innhold}</li>
-                </c:forEach>
-            </c:forEach>
-        </ul>
-    </div>
+    <h3>${studentkafe.telefon.nummer}</h3>
+</div>
 
-    <div id="">
+<div id="uke">
+    <p>${studentkafe.ukenummer}</p>
+</div>
 
-    </div>
+<div id="middager">
+    Mandag:
+    <c:forEach items="${studentkafe.mandag}" var="middag">
+        ${middag.type} : ${middag.innhold}
+        <c:if test="${middag.glutenfri}">
+            - <b>Glutenfri</b>
+        </c:if>
+        <c:if test="${middag.laktosefri}">
+            - <b>Laktosefri</b>
+        </c:if>
+        <br>
+    </c:forEach>
+    <br/>
+    Tirsdag:
+    <c:forEach items="${studentkafe.tirsdag}" var="middag">
+        ${middag.type} : ${middag.innhold}
+        <c:if test="${middag.glutenfri}">
+            - <b>Glutenfri</b>
+        </c:if>
+        <c:if test="${middag.laktosefri}">
+            - <b>Laktosefri</b>
+        </c:if>
+        <br>
+    </c:forEach>
+    <br/>
+    Onsdag:
+    <c:forEach items="${studentkafe.onsdag}" var="middag">
+        ${middag.type} : ${middag.innhold}
+        <c:if test="${middag.glutenfri}">
+            - <b>Glutenfri</b>
+        </c:if>
+        <c:if test="${middag.laktosefri}">
+            - <b>Laktosefri</b>
+        </c:if>
+        <br>
+    </c:forEach>
+    <br/>
+    Torsdag:
+    <c:forEach items="${studentkafe.torsdag}" var="middag">
+        ${middag.type} : ${middag.innhold}
+        <c:if test="${middag.glutenfri}">
+            - <b>Glutenfri</b>
+        </c:if>
+        <c:if test="${middag.laktosefri}">
+            - <b>Laktosefri</b>
+        </c:if>
+        <br>
+    </c:forEach>
+    <br/>
+    Fredag:
+    <c:forEach items="${studentkafe.fredag}" var="middag">
+        ${middag.type} : ${middag.innhold}
+        <c:if test="${middag.glutenfri}">
+            - <b>Glutenfri</b>
+        </c:if>
+        <c:if test="${middag.laktosefri}">
+            - <b>Laktosefri</b>
+        </c:if>
+        <br>
+    </c:forEach>
+    </li>
+    </ul>
+</div>
 
-    <a href="${currentUrl}?site_preference=normal">Normal</a> | <a href="${currentUrl}?site_preference=mobile">Mobile</a>
+<div id="">
+
+</div>
+
+<a href="${currentUrl}?site_preference=normal">Normal</a> | <a href="${currentUrl}?site_preference=mobile">Mobile</a>
 
 </body>
 </html>
