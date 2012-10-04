@@ -16,6 +16,7 @@
 
 <div data-role="page" data-add-back-btn="true">
     <div data-role="header" data-position="fixed" >
+        <a href='<spring:url value="/studentkafe/"/>' data-icon="back">Tilbake</a>
         <h1>${studentkafe.kortnavn}</h1>
     </div>
 
