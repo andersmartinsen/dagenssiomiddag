@@ -15,7 +15,7 @@
 
 <div data-role="page">
     <div data-role="header" data-position="fixed" >
-        <a href='<spring:url value="/studentkafe/"/>' data-icon="back">Tilbake</a>
+        <%--<a href='<spring:url value="/studentkafe/"/>' data-icon="back">Tilbake</a>--%>
         <h1>${studentkafe.kortnavn}</h1>
     </div>
 
