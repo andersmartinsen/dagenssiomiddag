@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -17,32 +18,24 @@
         <h1>${studentkafe.kortnavn}</h1>
     </div>
 
-    <div data-role="content">
-        <ul data-role="listview" data-theme="e">
+    <%--<div id="slider" data-role="content">
+        <ul  data-role="listview" data-theme="e">
             <c:forEach var="ukedager" items="${studentkafe.middager}">
                 <li><a href="">${ukedager.key}</a></li>
             </c:forEach>
         </ul>
+    </div>--%>
 
-        <br />
-
-        <div data-role="collapsible" data-theme="c" data-content-theme="a">
-            <h3>Serveringtidspunkt</h3>
-
-        </div>
-
-        <div data-role="collapsible" data-theme="c" data-content-theme="a">
-            <h3>Pris</h3>
-            <p>${studentkafe.prisInformasjon.informasjon}</p>
-        </div>
-
-        <div data-role="collapsible" data-theme="c" data-content-theme="a">
-            <h3>Adresse</h3>
-            <p>${studentkafe.adresse.linje1}</p>
-            <p>${studentkafe.adresse.linje2}</p>
-            <p>${studentkafe.telefon.nummer}</p>
-        </div>
+    <div id='slider' class='swipe'>
+        <ul>
+            <li style='display:block'><div>1</div></li>
+            <li style='display:none'><div>2</div></li>
+            <li style='display:none'><div>3</div></li>
+            <li style='display:none'><div>4</div></li>
+            <li style='display:none'><div>5</div></li>
+        </ul>
     </div>
+
 
     <div data-role="footer" data-position="fixed">
         <div data-role="navbar">
@@ -53,5 +46,11 @@
         </div>
     </div>
 </div>
+
+<script src="<spring:url value="/resources/js/swipe.js"/>"></script>
+<script>
+new Swipe(document.getElementById('slider'));
+</script>
+
 </body>
 </html>

@@ -17,7 +17,7 @@
         <h1>SiO sine studentkafeer</h1>
     </div>
 
-    <div id="slider" data-role="content">
+    <div data-role="content">
         <ul data-role="listview" data-theme="g">
             <c:forEach items="${studentkafene}" var="kafe">
                 <li><a href="${kafe.id}">${kafe.navn}</a></li>
@@ -34,11 +34,6 @@
         </div>
     </div>
 </div>
-
-<script src="<spring:url value="/resources/js/swipe.js"/>" ></script>
-<script>
-    new Swipe(document.getElementById('slider'));
-</script>
 
 </body>
 </html>
