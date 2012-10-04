@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-    <title><h1>${studentkafe.navn}</h1></title>
+    <title>${studentkafe.navn}</title>
 </head>
 <body>
 
 
 <div data-role="page">
     <div data-role="header">
-        <h1>${studentkafe.navn}</h1>
+        <h1>${studentkafe.kortnavn}</h1>
     </div>
 
     <div data-role="content">
