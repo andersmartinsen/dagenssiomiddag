@@ -13,12 +13,12 @@
     <title>${studentkafe.navn}</title>
 </head>
 <body>
-<div data-role="page">
+<div>
     <%--<div data-role="header">
         <h1>${studentkafe.kortnavn}</h1>
     </div>
 --%>
-      <div  id='slider' >
+      <div  id='slider' class="swipe">
             <ul>
                 <li style='display:block'><div>1</div></li>
                 <li style='display:none'><div>2</div></li>
