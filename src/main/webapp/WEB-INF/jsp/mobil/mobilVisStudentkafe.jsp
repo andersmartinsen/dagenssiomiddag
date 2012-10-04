@@ -14,7 +14,7 @@
 <body>
 
 
-<div data-role="page">
+<div data-role="page" >
     <div data-role="header" data-position="fixed">
         <h1>${studentkafe.kortnavn}</h1>
     </div>
@@ -106,20 +106,10 @@
     </div>
 </div>
 
-
-<script src='swipe.js'></script>
-<script>
-    new Swipe(document.getElementById('slider'));
-    new Swipe(document.getElementById('slider2'));
-    var slider3 = new Swipe(document.getElementById('slider3'));
-    var slider4 = new Swipe(document.getElementById('slider4'));
-</script>
-
 <script src='<spring:url value="/resources/js/swipe.js"/>'></script>
 <script>
     new Swipe(document.getElementById('slider'));
 </script>
-
 
 </body>
 </html>
