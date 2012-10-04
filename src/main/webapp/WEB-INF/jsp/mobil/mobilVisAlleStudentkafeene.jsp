@@ -35,7 +35,7 @@
     </div>
 </div>
 
-<script src='/js/swipe.js'></script>
+<script src='../js/swipe.js'></script>
 <script>
     new Swipe(document.getElementById('slider'));
 </script>
