@@ -14,36 +14,28 @@
 </head>
 <body>
 <div data-role="page">
-    <div data-role="header">
+    <%--<div data-role="header">
         <h1>${studentkafe.kortnavn}</h1>
     </div>
-
-    <div data-role="content">
-      <%--  <ul  data-role="listview" data-theme="e">
-            <c:forEach var="ukedager" items="${studentkafe.middager}">
-                <li><a href="">${ukedager.key}</a></li>
-            </c:forEach>
-        </ul>--%>
-            <ul id='slider' >
+--%>
+      <div  id='slider' >
+            <ul>
                 <li style='display:block'><div>1</div></li>
                 <li style='display:none'><div>2</div></li>
                 <li style='display:none'><div>3</div></li>
                 <li style='display:none'><div>4</div></li>
                 <li style='display:none'><div>5</div></li>
             </ul>
-    </div>
+        </div>
 
-
-
-
-    <div data-role="footer" data-position="fixed">
+    <%--<div data-role="footer" data-position="fixed">
         <div data-role="navbar">
             <ul>
                 <li><a href="${currentUrl}?site_preference=normal">Normal</a></li>
                 <li><a href="${currentUrl}?site_preference=mobile">Mobile</a></li>
             </ul>
         </div>
-    </div>
+    </div>--%>
 </div>
 
 <script src="<spring:url value="/resources/js/swipe.js"/>"></script>
