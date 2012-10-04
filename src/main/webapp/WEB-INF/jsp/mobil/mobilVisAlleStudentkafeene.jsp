@@ -14,7 +14,7 @@
 <body>
 
 <div data-role="page">
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
         <h1>SiO sine studentkafeer</h1>
     </div>
 
@@ -27,7 +27,7 @@
     </div>
 
     <div data-role="footer">
-        <div data-role="navbar">
+        <div data-role="navbar" data-position="fixed">
             <ul>
                 <li><a href="${currentUrl}?site_preference=normal">Normal</a></li>
                 <li><a href="${currentUrl}?site_preference=mobile">Mobile</a></li>
