@@ -18,7 +18,8 @@
         <h1>SiO sine studentkafeer</h1>
     </div>
 
-    <div data-role="content" id="slider" class="swipe">
+    <div data-role="content">
+        <div id="slider" class="swipe">
             <ul>
                 <li style='display:block'><div>1</div></li>
                 <li style='display:none'><div>2</div></li>
@@ -26,6 +27,7 @@
                 <li style='display:none'><div>4</div></li>
                 <li style='display:none'><div>5</div></li>
             </ul>
+        </div>
     </div>
 
     <div data-role="footer">
